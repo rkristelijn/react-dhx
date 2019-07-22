@@ -1,11 +1,11 @@
 import React from "react";
-import { Layout } from "dhx-suite";
-import "dhx-suite/codebase/suite.min.css";
 import "./App.css";
 
+import Layout from "./dhx/Layout";
+
 function App() {
-  console.log(Layout);
-  var layout = new Layout("layout_container", {
+  // console.log(Layout);
+  var layout = {
     cols: [
       { header: "Column 1" },
       {
@@ -23,8 +23,8 @@ function App() {
         ]
       }
     ]
-  });
-  return <div id="layout_container" />;
+  };
+  return <Layout layout={layout} />;
 }
 
 export default App;
