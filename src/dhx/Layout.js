@@ -7,7 +7,9 @@ export default function(props) {
     const { layout, header, sidebar, content, aside, footer } = props;
 
     const _layout = new Layout("dhx_layout", layout);
-    _layout.cell("toolbar").attachHTML(header);
+    typeof header == "string"
+      ? _layout.cell("toolbar").attachHTML(header)
+      : _layout.cell("toolbar").attach(header);
     _layout.cell("sidebar").attachHTML(sidebar);
     typeof content == "string"
       ? _layout.cell("content").attachHTML(content)

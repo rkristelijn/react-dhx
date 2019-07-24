@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 import Layout from "./dhx/Layout";
@@ -11,17 +11,23 @@ import { Grid } from "dhx-suite";
 import "dhx-suite/codebase/suite.min.css";
 
 function App() {
+  const [grid, setGrid] = useState();
   const layout = mainLayoutConfig;
-  // const grid = new Grid("grid_container", gridConfig);
+
   return (
-    <Layout
-      layout={layout}
-      header={"HEAder"}
-      sidebar={"SIDEbar"}
-      content={new Grid("grid_container", gridConfig)}
-      aside={"ASide"}
-      footer={"FOoter"}
-    />
+    <>
+      <button onClick={() => setGrid(new Grid("grid_container", gridConfig))}>
+        Click me
+      </button>
+      <Layout
+        layout={layout}
+        header={"HEAder"}
+        sidebar={"SIDEbar"}
+        content={'<div id="grid_container" />'}
+        aside={"ASide"}
+        footer={"FOoter"}
+      />
+    </>
   );
 }
 
