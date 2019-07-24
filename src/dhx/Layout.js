@@ -5,7 +5,6 @@ import "dhx-suite/codebase/suite.min.css";
 
 export default function(props) {
   useEffect(() => {
-    const { layout } = props;
     // const grid = new Grid("grid_container", {
     //   columns: [
     //     { width: 100, id: "a", header: [{ text: "#" }] },
@@ -40,7 +39,14 @@ export default function(props) {
     // });
     // console.log(grid);
     // let _layout = new Layout("layout_container", layout);
-    new Layout("dhx_layout", layout);
+    const { layout, header, sidebar, content, aside, footer } = props;
+
+    const _layout = new Layout("dhx_layout", layout);
+    _layout.cell("toolbar").attachHTML(header);
+    _layout.cell("sidebar").attachHTML(sidebar);
+    _layout.cell("content").attachHTML(content);
+    _layout.cell("rightbar").attachHTML(aside);
+    _layout.cell("footer").attachHTML(footer);
     // _layout.cell("main").attachHTML('<div id="grid_container" />');
   });
 
