@@ -1,33 +1,37 @@
-.App {
-  text-align: center;
+/* https://stackoverflow.com/questions/23090136/how-can-i-make-my-flexbox-layout-take-100-vertical-space */
+
+#dhx_layout {
+  /* min-height: 900px; */
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.dhx_layout_container {
+  min-height: 800px;
+  background-color: rgb(255, 0, 0);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.dhx_layout_row--top {
+  background-color: rgb(134, 121, 121);
+}
+.dhx_layout_row--middle {
+  background-color: rgb(249, 6, 6);
+}
+.dhx_layout_row--bottom {
+  background-color: rgb(140, 115, 115);
 }
 
-.App-link {
-  color: #61dafb;
+.dhx_layout_row--middle--left {
+  background-color: rgb(242, 13, 13);
+}
+.dhx_layout_row--middle--middle {
+  background-color: rgb(147, 108, 108);
+  flex: 1 1;
+}
+.dhx_layout_row--middle--right {
+  background-color: rgb(236, 19, 19);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dhx_layout_row-middle {
+  background-color: rgb(179, 77, 77);
+  /* flex: 2;
+  display: flex; */
 }
