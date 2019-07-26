@@ -14,4 +14,4 @@ I did my best trying to implement [Layout](https://docs.dhtmlx.com/suite/samples
 
 # Screenshot
 
-![](./doc/sample.mov)
+![](./doc/sample.png)
