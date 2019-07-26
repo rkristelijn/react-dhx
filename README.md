@@ -14,4 +14,6 @@ I did my best trying to implement [Layout](https://docs.dhtmlx.com/suite/samples
 
 # Screenshot
 
+Clicking the button a few times adds a grid... not quite happy about it, maybe the info of [#2](https://github.com/rkristelijn/react-dhx/issues/2) or [react-widgets](https://github.com/rkristelijn/react-widgets) will help.
+
 ![](./doc/sample.png)
